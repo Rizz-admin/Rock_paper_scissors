@@ -19,7 +19,11 @@ function of computer's choice
         return: comp's choice =  scissors;
 }
 
-function of checking human's choice (is it correct)
+function of checking human's choice (is it correct) {
+    convert anycase to lowercase
+    compare input with available choices 
+    if no match: ask for another try
+}
 
 function of comparing choices (human's choice; robots choice)
 {
