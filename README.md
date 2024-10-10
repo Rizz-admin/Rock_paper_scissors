@@ -19,6 +19,8 @@ function of computer's choice
         return: comp's choice =  scissors;
 }
 
+function of checking human's choice (is it correct)
+
 function of comparing choices (human's choice; robots choice)
 {
     if human(rock) and computer(paper):

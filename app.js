@@ -8,3 +8,21 @@ var comp;
 var humscore;
 //global variable to store computer's score
 var compscore;
+
+//function of computer's choice 
+function choice ()
+{
+    var rand = Number(Math.floor((Math.random() * 100) + 1))
+    if (rand <= 32) {
+        return comp = 'rock';
+    }
+    if (rand > 32 && rand <= 65) {
+        return comp = 'paper';
+    } 
+    else {
+        return comp = 'scissors';
+    }
+}
+
+choice()
+console.log(comp)
