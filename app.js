@@ -23,6 +23,3 @@ function choice ()
         return comp = 'scissors';
     }
 }
-
-choice()
-console.log(comp)
