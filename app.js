@@ -1,6 +1,6 @@
 
 //global variable to store human's choice
-var human; 
+var human = prompt("Enter rock or paper or scissor"); 
 //global variable to store computer's choice
 var comp;
 

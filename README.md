@@ -8,8 +8,6 @@ create global variable to store human's score
 
 create global variable to store computer's score
 
-function that aquire human's choice
-
 function of comparing choices (human's choice; robots choice)
 {
     if human(rock) and computer(paper):
