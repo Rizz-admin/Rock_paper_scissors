@@ -1,6 +1,6 @@
 
 //global variable to store human's choice
-var human = prompt("Enter rock or paper or scissor"); 
+var human = get_input(); 
 //global variable to store computer's choice
 var comp = choice();
 
@@ -8,6 +8,26 @@ var comp = choice();
 var humscore;
 //global variable to store computer's score
 var compscore;
+
+//global variable to store winner
+let winner = compare(human, comp);
+
+//function of getting input
+function get_input() 
+{
+    let input = prompt('Enter rock, paper or scissors');
+    if (input === 'rock' || input === 'paper' || input === 'scissors'){
+        return input;
+    }
+    else if (input == '') {
+        alert('No value. Please enter something.');
+        return;
+    }
+    else {
+        alert('Incorrect spelling. Please check spelling.');
+        return;
+    }
+}
 
 //function of computer's choice 
 function choice ()
@@ -32,6 +52,9 @@ function input (arg1)
     //compare input with available choices 
     if (result === 'rock' || result === 'paper' || result === 'scissors') {
         return result;
+    }
+    else if (result == undefined){
+        bre
     }
     //if no match: ask for another try
     else { 

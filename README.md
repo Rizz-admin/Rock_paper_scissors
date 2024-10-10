@@ -1,5 +1,13 @@
 # Rock_paper_scissors
 
+function of getting input () 
+{
+    getting prompt from the human and return value of input
+    if no value is given return prompt 
+    if value is not equal to items return prompt
+
+}
+
 create global variable to store human's choice
 
 create global variable to store computer's choice
@@ -60,3 +68,25 @@ fucntion of comparing scores
     else: 
         continue;
 }
+
+
+
+//function of counting wins 
+function counter(argw)
+{//BUG DOWN HERE !!!
+    if (argw === 'robot'){
+        compscore += 1;
+        return compscore;
+    }
+    else if (argw === 'human'){
+        humscore += 1;
+        return humscore;
+    }
+    else {
+        return 0; 
+    }
+}
+
+let res = counter(winner)
+
+console.log(res)
