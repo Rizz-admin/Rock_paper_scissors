@@ -16,8 +16,9 @@ let winner = compare(human, comp);
 function get_input() 
 {
     let input = prompt('Enter rock, paper or scissors');
-    if (input === 'rock' || input === 'paper' || input === 'scissors'){
-        return input;
+    let temp = input.toLowerCase();
+    if (temp === 'rock' || temp === 'paper' || temp === 'scissors'){
+        return temp;
     }
     else if (input == '') {
         alert('No value. Please enter something.');
@@ -41,24 +42,6 @@ function choice ()
     } 
     else {
         return comp = 'scissors';
-    }
-}
-
-//function of checking and converting human's input
-function input (arg1)
-{
-    //convert anycase to lowercase
-    let result = arg1.toLowerCase();
-    //compare input with available choices 
-    if (result === 'rock' || result === 'paper' || result === 'scissors') {
-        return result;
-    }
-    else if (result == undefined){
-        bre
-    }
-    //if no match: ask for another try
-    else { 
-        console.log('Wrong spelling. Try again!')
     }
 }
 
