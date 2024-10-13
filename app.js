@@ -13,7 +13,7 @@ var humscore = 0;
 //global variable to store computer's score
 var compscore = 0;
 
-var ultimatewinner;
+var ulwinner;
 
 //function of getting input
 function get_input() 
@@ -84,34 +84,24 @@ function counter(argw)
         return; 
     }
 }
-//function of simulation of 5 wins
+
+//function of simulation 
 function simulation()
 {
-    console.log(humscore)
-    console.log(compscore)
-   // if number of wins < 5
-   if (humscore < 5 && compscore < 5)
-   {
+    while (compscore < 5 && humscore < 5)
+    {
         human = get_input();
-        comp = choice()
-        winner = compare(human, comp)
-        counter(winner)
-        simulation()
-   }
-   else if (humscore == 5)
-   {
-    return 'human'
-   }
-   else if (compscore == 5)
-   {
-    return 'computer'
-   }
-   
+        comp = choice();
+        winner = compare(human, comp);
+        counter(winner);
+    }
+    if (compscore > humscore) {
+        ulwinner = 'computer';
+        return ulwinner;
+    }
+    else {
+        ulwinner = 'human';
+        return ulwinner;
+    }
 }
-
-ultimatewinner = simulation()
-
-console.log(ultimatewinner)
-
-
 
