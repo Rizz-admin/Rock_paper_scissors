@@ -27,11 +27,6 @@ function of computer's choice
         return: comp's choice =  scissors;
 }
 
-function of checking human's choice (is it correct) {
-    convert anycase to lowercase
-    compare input with available choices 
-    if no match: ask for another try
-}
 
 function of comparing choices (human's choice; robots choice)
 {
@@ -56,37 +51,64 @@ function of counting wins
     human's score + 1;
 }
 
-fucntion of comparing scores 
+
+
+function of simulation 
 {
-    if human's score or robot's score == 5;
-        if human's score > robot's score:
-            return: human is a winner
-            and reset score
-        else: 
-            return: computer is a winner
-            and reset score
-    else: 
-        continue;
+    while scores < 5 
+    {
+        invoke functions: 
+            get input 
+            computer's choice 
+            comparing choice 
+            count of wins
+    }
+    if computer score > human score 
+        {
+            ultimate_winner = computer
+        } else {
+            ultimate_winner = human
+        }
+    return ultimate winner
 }
 
-
-
-//function of counting wins 
-function counter(argw)
-{//BUG DOWN HERE !!!
-    if (argw === 'robot'){
-        compscore += 1;
-        return compscore;
-    }
-    else if (argw === 'human'){
-        humscore += 1;
-        return humscore;
-    }
-    else {
-        return 0; 
-    }
+function of declaring the winner 
+{
+    if com
 }
 
-let res = counter(winner)
+function of com
 
-console.log(res)
+function of printing the winner
+
+
+
+
+
+
+
+
+// //function of simulation of 5 wins
+function simulation()
+{
+    console.log(humscore)
+    console.log(compscore)
+   // if number of wins < 5
+   while (humscore < 5 && compscore < 5)
+   {
+        human = get_input();
+        comp = choice()
+        winner = compare(human, comp)
+        counter(winner)
+   }
+   else if (humscore == 5)
+   {
+    return 'human'
+   }
+   else if (compscore == 5)
+   {
+    return 'computer'
+   }
+   
+}
+
