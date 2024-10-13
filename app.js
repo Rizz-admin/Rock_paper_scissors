@@ -65,6 +65,7 @@ function compare(argh, argr)
         return winner = 'robot';
     } 
     else if (argh === argr){
+        console.log('tie!')
         return winner = 'tie'
     }
     else {
