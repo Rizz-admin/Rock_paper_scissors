@@ -4,13 +4,13 @@ var human = get_input();
 //global variable to store computer's choice
 var comp = choice();
 
-//global variable to store human's score
-var humscore;
-//global variable to store computer's score
-var compscore;
-
 //global variable to store winner
 let winner = compare(human, comp);
+
+//global variable to store human's score
+var humscore = 0;
+//global variable to store computer's score
+var compscore = 0;
 
 //function of getting input
 function get_input() 
@@ -55,7 +55,7 @@ function compare(argh, argr)
     else if (argh === 'scissors' && argr === 'rock'){
         return winner = 'robot';
     }
-    else if (argh === 'paper' && argr === 'scissorss'){
+    else if (argh === 'paper' && argr === 'scissors'){
         return winner = 'robot';
     } 
     else if (argh === argr){
@@ -63,6 +63,22 @@ function compare(argh, argr)
     }
     else {
         return winner = 'human';
+    }
+}
+
+//function of counting wins 
+function counter(argw)
+{
+    if (argw === 'robot'){
+        compscore = compscore + 1;
+        return compscore;
+    }
+    else if (argw === 'human'){
+        humscore = humscore + 1;
+        return humscore;
+    }
+    else if (argw === 'tie'){
+        return; 
     }
 }
 
