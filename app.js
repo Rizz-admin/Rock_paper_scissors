@@ -12,8 +12,11 @@ let winner;
 var humscore = 0;
 //global variable to store computer's score
 var compscore = 0;
-
+// global variable to store the ultimate winner
 var ulwinner;
+
+//invoke 5 wins battle simulation
+simulation()
 
 //function of getting input
 function get_input() 
@@ -101,14 +104,16 @@ function simulation()
         counter(winner);
     }
     if (compscore > humscore) {
-        ulwinner = 'computer';
+        ulwinner = 'ultimate winner is computer!';
+        console.log(ulwinner);
         return ulwinner;
     }
     else {
-        ulwinner = 'human';
+        ulwinner = 'ultimate winner is human!';
+        console.log(ulwinner);
         return ulwinner;
     }
 }
 
-simulation()
+
 
