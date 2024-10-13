@@ -53,18 +53,22 @@ function compare(argh, argr)
 {
     let winner = undefined;
     if (argh === 'rock' && argr === 'paper'){
+        console.log('You lose! %s beats %s.', argr, argh)
         return winner = 'robot';
     }
     else if (argh === 'scissors' && argr === 'rock'){
+        console.log('You lose! %s beats %s.', argr, argh)
         return winner = 'robot';
     }
     else if (argh === 'paper' && argr === 'scissors'){
+        console.log('You lose! %s beats %s.', argr, argh)
         return winner = 'robot';
     } 
     else if (argh === argr){
         return winner = 'tie'
     }
     else {
+        console.log('You win! %s beats %s.', argh, argr)
         return winner = 'human';
     }
 }
@@ -104,4 +108,6 @@ function simulation()
         return ulwinner;
     }
 }
+
+simulation()
 

@@ -72,43 +72,8 @@ function of simulation
     return ultimate winner
 }
 
-function of declaring the winner 
-{
-    if com
-}
-
-function of com
-
-function of printing the winner
 
 
 
 
-
-
-
-
-// //function of simulation of 5 wins
-function simulation()
-{
-    console.log(humscore)
-    console.log(compscore)
-   // if number of wins < 5
-   while (humscore < 5 && compscore < 5)
-   {
-        human = get_input();
-        comp = choice()
-        winner = compare(human, comp)
-        counter(winner)
-   }
-   else if (humscore == 5)
-   {
-    return 'human'
-   }
-   else if (compscore == 5)
-   {
-    return 'computer'
-   }
-   
-}
 
