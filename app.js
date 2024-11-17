@@ -1,10 +1,9 @@
-
 //global variable to store human's choice 
 var human; 
 //global variable to store computer's choice
 var comp;
 //global variable to store winner
-let winner;
+var winner;
 
 // ↑↑↑ CAN ADD TO FUNC SIMULATION AND DELETE!!! ↑↑↑
 
@@ -15,26 +14,56 @@ var compscore = 0;
 // global variable to store the ultimate winner
 var ulwinner;
 
-//invoke 5 wins battle simulation
-simulation()
 
-//function of getting input
-function get_input() 
-{
-    let input = prompt('Enter rock, paper or scissors');
-    let temp = input.toLowerCase();
-    if (temp === 'rock' || temp === 'paper' || temp === 'scissors'){
-        return temp;
+
+const buttons = document.querySelectorAll("button");
+const div = document.querySelector("#res");
+const scoreH = document.querySelector("#hum");
+const scoreR = document.querySelector("#rob");
+
+buttons.forEach(button =>{
+    button.addEventListener("click", function() {
+        human = button.value;
+        winner = playRound(human);
+        counter(winner);
+        ulwinner = decWinner(humscore, compscore);
+        displayRes(ulwinner);
+        displayScore(humscore, compscore);
+    });
+});
+
+//function of displaying results to reduce the code inside event handler
+function displayRes (ulwinner){
+    div.textContent = ulwinner;
+}
+function displayScore (argh, argr){
+    scoreH.textContent = "Human:" + argh;
+    scoreR.textContent = "Robot:" + argr;
+}
+
+
+
+// function of playing one round
+function playRound(argh){
+    comp = choice();
+    winner = compare(argh,comp);
+    return winner;
+}
+
+function decWinner(hscore,cscore) {
+    if (hscore == 5){
+        ulwinner = "human";
+        return ulwinner;
     }
-    else if (input == '') {
-        alert('No value. Please enter something.');
-        return;
-    }
-    else {
-        alert('Incorrect spelling. Please check spelling.');
-        return;
+    else if (cscore == 5){
+        ulwinner = "robot";
+        return ulwinner;
     }
 }
+
+
+
+
 
 //function of computer's choice 
 function choice()
@@ -54,7 +83,6 @@ function choice()
 //function of comparing choices (human's choice; robots choice)
 function compare(argh, argr)
 {
-    let winner = undefined;
     if (argh === 'rock' && argr === 'paper'){
         console.log('you lose! %s beats %s.', argr, argh)
         return winner = 'robot';
@@ -77,6 +105,7 @@ function compare(argh, argr)
     }
 }
 
+
 //function of counting wins 
 function counter(argw)
 {
@@ -93,27 +122,38 @@ function counter(argw)
     }
 }
 
-//function of simulation 
-function simulation()
-{
-    while (compscore < 5 && humscore < 5)
-    {
-        human = get_input();
-        comp = choice();
-        winner = compare(human, comp);
-        counter(winner);
-    }
-    if (compscore > humscore) {
-        ulwinner = 'ultimate winner is computer!';
-        console.log(ulwinner);
-        return ulwinner;
-    }
-    else {
-        ulwinner = 'ultimate winner is human!';
-        console.log(ulwinner);
-        return ulwinner;
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
